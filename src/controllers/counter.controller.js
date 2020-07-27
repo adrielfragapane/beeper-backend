@@ -40,7 +40,7 @@ counterController.generateCounterQR = async (req,res) => {
 
     //*********prepare about the images*************
     
-    var text = URL_API + 'counter/' + req.params.id ;
+    var text = URL_APP + 'counter/' + req.params.id ;
     
     var qr_svg = qr.image(text, { type: 'png' });
     
