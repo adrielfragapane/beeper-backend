@@ -1,4 +1,4 @@
-const Counter = require('../models/counter');
+const Counter = require('../models/Counter');
 const qr = require('qr-image');
 const dotenv = require('dotenv').config();
 const fs = require('fs');

@@ -1,4 +1,4 @@
-const Modelo = require('../models/modelo');
+const Modelo = require('../models/Modelo');
 
 const modeloController = {};
 
