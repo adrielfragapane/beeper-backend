@@ -41,7 +41,7 @@ counterController.generateCounterQR = async (req,res) => {
     const URL_APP = process.env.ENV=='PROD' ? process.env.URL_APP_REMOTE : process.env.URL_APP_LOCAL;
     //*********prepare about the images*************
     
-    var text = URL_APP + 'counter/' + req.params.id ;
+    var text = URL_APP + 'viewCounter/' + req.params.id ;
     
     var qr_svg = qr.image(text, { type: 'png' });
     
