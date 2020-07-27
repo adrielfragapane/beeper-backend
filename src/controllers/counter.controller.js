@@ -38,6 +38,7 @@ counterController.generateCounterQR = async (req,res) => {
 
     const URL_API = process.env.ENV=='PROD' ? process.env.URL_API_REMOTE : process.env.URL_API_LOCAL;
 
+    const URL_APP = process.env.ENV=='PROD' ? process.env.URL_APP_REMOTE : process.env.URL_APP_LOCAL;
     //*********prepare about the images*************
     
     var text = URL_APP + 'counter/' + req.params.id ;
