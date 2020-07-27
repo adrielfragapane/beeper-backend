@@ -1,5 +1,6 @@
 const Counter = require('../models/counter');
 const qr = require('qr-image');
+const dotenv = require('dotenv').config();
 const fs = require('fs');
 const counterController = {};
 
@@ -35,10 +36,11 @@ counterController.generateCounterQR = async (req,res) => {
     const nombre = req.body.nombre ;
     const imgPath = '../../public/images/';
 
-    
+    const URL_API = process.env.ENV=='PROD' ? process.env.URL_API_REMOTE : process.env.URL_API_LOCAL;
+
     //*********prepare about the images*************
     
-    var text ='http://localhost:4000/counter/' + req.params.id ;
+    var text = URL_API + 'counter/' + req.params.id ;
     
     var qr_svg = qr.image(text, { type: 'png' });
     
